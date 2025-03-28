@@ -8,7 +8,7 @@ A cybersecurity enthusiast with experience in penetration testing, network secur
 
 ## 🎯 Objective
 
-As a **cybersecurity professional** with a **Computer Engineering** background, I specialize in **Penetration Testing, Cloud Security, and Network Security**. My goal is to leverage my technical expertise to strengthen cybersecurity defenses, identify vulnerabilities, and protect digital infrastructures from emerging threats through proactive security measures.
+As a **cybersecurity professional** with a **Computer Engineering** background, I specialize in **Penetration Testing, Cloud Security, and Network Security**. I aim to leverage my technical expertise to strengthen cybersecurity defenses, identify vulnerabilities, and protect digital infrastructures from emerging threats through proactive security measures.
 
 ## 🛠️ Skills & Expertise
 
