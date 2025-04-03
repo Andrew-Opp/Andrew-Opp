@@ -58,7 +58,8 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 ## 📝 Certifications
 
 <div>
-<img src="https://img.shields.io/badge/-IBM-1F70C1?&style=for-the-badge&logo=IBM&logoColor=white" />
+
+<a href="https://coursera.org/share/85f30cead98c552f2b9f348a97a28cd7"><img src="https://img.shields.io/badge/-IBM-1F70C1?&style=for-the-badge&logo=IBM&logoColor=white" />
 <img src="https://img.shields.io/badge/-EC--Council_Ethical_Hacking_Essentials-FF0000?&style=for-the-badge&logoColor=white" />
 <img src="https://img.shields.io/badge/-EC--Council_Digital_Forensics_Essentials-FF0000?&style=for-the-badge&logoColor=white" />
 <img src="https://img.shields.io/badge/-Cisco_SOC_Fundamentals-004C99?&style=for-the-badge&logo=Cisco&logoColor=white" />
