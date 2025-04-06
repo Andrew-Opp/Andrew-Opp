@@ -15,7 +15,7 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 | Skill                                         | Associated Project         |
 |-----------------------------------------------|----------------------------|
 | Firewall Configuration           | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>|
-| Secure Network Design                        | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a> |
+| Secure Network Design                        | <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">AWS Penetration Testing Lab</a> |
 | Monitoring & Metrics Collection with Prometheus | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>      |
 | Reverse Proxy Configuration        | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>  |
 | Data Visualization using Grafana      | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>  |
@@ -27,13 +27,13 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 <div>
     <img src="https://img.shields.io/badge/-Firewall_Configuration-FF5733?&style=for-the-badge&logo=Security&logoColor=white" />
     <img src="https://img.shields.io/badge/-VPN_Setup-2980B9?&style=for-the-badge&logo=Security&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Secure_Network_Design-27AE60?&style=for-the-badge&logo=Security&logoColor=white" />
+    <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab"><img src="https://img.shields.io/badge/-Secure_Network_Design-27AE60?&style=for-the-badge&logo=Security&logoColor=white" />
 </div>
 
 ### Cybersecurity Tools
 <div>
     <img src="https://img.shields.io/badge/-Metasploit-EE5A24?&style=for-the-badge&logo=Metasploit&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Nmap-004C99?&style=for-the-badge&logo=Nmap&logoColor=white" />
+    <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab"><img src="https://img.shields.io/badge/-Nmap-004C99?&style=for-the-badge&logo=Nmap&logoColor=white" />
     <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />
     <img src="https://img.shields.io/badge/-Burp_Suite-FF0000?&style=for-the-badge&logo=BurpSuite&logoColor=white" />
     <img src="https://img.shields.io/badge/-Wazuh-2C3E50?&style=for-the-badge&logo=Wazuh&logoColor=white" />
@@ -42,9 +42,9 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 ### Cloud
 <div>
     <img src="https://img.shields.io/badge/-AWS_S3-FF9900?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
-    <img src="https://img.shields.io/badge/-AWS_EC2-232F3E?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
-    <img src="https://img.shields.io/badge/-AWS_VPC-FF9900?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
-    <img src="https://img.shields.io/badge/-AWS_IAM-232F3E?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
+    <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab"><img src="https://img.shields.io/badge/-AWS_EC2-232F3E?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
+    <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab"><img src="https://img.shields.io/badge/-AWS_VPC-FF9900?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
+    <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab"><img src="https://img.shields.io/badge/-AWS_IAM-232F3E?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
     <img src="https://img.shields.io/badge/-AWS_Lambda-FF9900?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
     <img src="https://img.shields.io/badge/-AWS_CloudTrail-232F3E?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
     <img src="https://img.shields.io/badge/-AWS_CloudWatch-FF9900?&style=for-the-badge&logo=AmazonAWS&logoColor=white" />
@@ -69,11 +69,23 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 <a href="https://coursera.org/share/ed44486871d32b3ec0bed0e3de9cdbd1"><img src="https://img.shields.io/badge/-Cisco_Endpoints_and_Systems_Security-004C99?&style=for-the-badge&logo=Cisco&logoColor=white" />
 </div>
 
+## 🎓 Education
+
+*BSc in Computer Engineering*
+<a href="https://uenr.edu.gh/">University of Energy and Natural Resources</a>, 2023
+
 ## 🗂 Projects
 
 ### 1️⃣ **Containerized Reverse Proxy for Web Applications**
 📌 *A secure and scalable reverse proxy setup with HTTPS, load balancing, and monitoring.*  
 📚 <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>  | 📝 <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">[Read More]</a>
+
+### 2️⃣ **AWS Penetration Testing Lab**
+
+📌 *Create a vulnerable cloud environment on AWS, simulate attacks using Kali Linux tools, identify security flaws, then harden and secure the environment using AWS-native services.*
+📚 <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">AWS Penetration Testing Lab</a>  | 📝 <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">[Read More]</a>
+
+
 
 ## 📞 Contact
 
