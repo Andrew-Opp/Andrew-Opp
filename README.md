@@ -15,8 +15,9 @@ As a **cybersecurity professional** with a **Computer Engineering** background, 
 | Skill                                         | Associated Project         |
 |-----------------------------------------------|----------------------------|
 | Firewall Configuration           | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>|
-| Secure Network Design                        | <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">AWS Penetration Testing Lab</a> |
+| Secure Network Design                        | <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">AWS Lab</a> , <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a> |
 | Monitoring & Metrics Collection with Prometheus | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>      |
+| Vulnerability Assessment | <a href="https://github.com/Andrew-Opp/AWS-Penetration-Testing-Lab">AWS Penetration Testing Lab</a>      |
 | Reverse Proxy Configuration        | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>  |
 | Data Visualization using Grafana      | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a>  |
 | Networking Concepts in Docker environments | <a href="https://github.com/Andrew-Opp/Reverse-Proxy-Monitoring-Suite">Reverse Proxy Monitoring Suite</a> |
