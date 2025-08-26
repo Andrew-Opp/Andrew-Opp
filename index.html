@@ -14,16 +14,35 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
-      color: #f1f1f1;
+      background: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
+    :root {
+      --bg-color: #0d0d0d;
+      --card-color: #1a1a1a;
+      --text-color: #f1f1f1;
+      --muted-color: #aaa;
+      --accent-color: #00b4d8;
+      --secondary-accent: #00ff99;
+    }
+
+    body.light-mode {
+      --bg-color: #ffffff;
+      --card-color: #f4f4f4;
+      --text-color: #333333;
+      --muted-color: #555;
+      --accent-color: #0077cc;
+      --secondary-accent: #008c5a;
+    }
+
     /* Navbar */
     header {
-      background: #0d0d0d;
+      background: var(--bg-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -32,15 +51,28 @@
       top: 0;
       z-index: 100;
     }
-    header h1 { font-size: 1.5rem; color: #fff; }
+    header h1 { font-size: 1.5rem; color: var(--text-color); }
     nav ul { display: flex; gap: 25px; }
     nav ul li a {
-      color: #ddd; font-weight: 500; transition: 0.3s;
+      color: var(--muted-color); font-weight: 500; transition: 0.3s;
     }
-    nav ul li a:hover { color: #00b4d8; }
+    nav ul li a:hover { color: var(--accent-color); }
     .hire-btn {
-      background: #00b4d8; padding: 8px 16px; border-radius: 20px;
+      background: var(--accent-color); padding: 8px 16px; border-radius: 20px;
       color: #fff; font-weight: 600;
+    }
+    .theme-toggle {
+      background: none;
+      border: 2px solid var(--accent-color);
+      border-radius: 50%;
+      color: var(--accent-color);
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 15px;
     }
 
     /* Hero */
@@ -49,36 +81,36 @@
       gap: 40px; padding: 80px 40px; align-items: center;
     }
     .hero-card {
-      background: #1a1a1a; border-radius: 12px; padding: 30px; text-align: center;
+      background: var(--card-color); border-radius: 12px; padding: 30px; text-align: center;
     }
     .hero-card img {
-      width: 150px; border-radius: 50%; border: 4px solid #00b4d8; margin-bottom: 20px;
+      width: 150px; border-radius: 50%; border: 4px solid var(--accent-color); margin-bottom: 20px;
     }
     .hero-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
-    .hero-card p { font-size: 0.95rem; color: #aaa; }
+    .hero-card p { font-size: 0.95rem; color: var(--muted-color); }
     .hero-card .socials { margin-top: 15px; }
-    .hero-card .socials a { margin: 0 8px; font-size: 1.2rem; color: #00b4d8; }
+    .hero-card .socials a { margin: 0 8px; font-size: 1.2rem; color: var(--accent-color); }
 
     .hero-content {
-      background: #1a1a1a; border-radius: 12px; padding: 40px;
+      background: var(--card-color); border-radius: 12px; padding: 40px;
     }
-    .hero-content h3 { color: #aaa; margin-bottom: 10px; }
+    .hero-content h3 { color: var(--muted-color); margin-bottom: 10px; }
     .hero-content h1 { font-size: 2rem; margin-bottom: 20px; }
     .hero-content p { margin-bottom: 20px; }
-    .hero-content .status { color: #00ff99; font-weight: bold; margin-bottom: 20px; }
+    .hero-content .status { color: var(--secondary-accent); font-weight: bold; margin-bottom: 20px; }
     .hero-content .btn {
-      background: #00b4d8; padding: 12px 24px; border-radius: 8px; color: #fff;
+      background: var(--accent-color); padding: 12px 24px; border-radius: 8px; color: #fff;
       font-weight: bold; transition: 0.3s;
     }
-    .hero-content .btn:hover { background: #0094b2; }
+    .hero-content .btn:hover { filter: brightness(0.9); }
 
     /* Section */
     section { padding: 60px 40px; max-width: 1100px; margin: auto; }
     section h2 {
-      font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: #fff;
+      font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--text-color);
     }
     section p {
-      text-align: center; max-width: 700px; margin: auto; color: #bbb; margin-bottom: 40px;
+      text-align: center; max-width: 700px; margin: auto; color: var(--muted-color); margin-bottom: 40px;
     }
 
     /* Projects Grid */
@@ -87,67 +119,61 @@
       gap: 20px;
     }
     .project-card {
-      background: #1a1a1a; padding: 20px; border-radius: 12px; transition: 0.3s;
+      background: var(--card-color); padding: 20px; border-radius: 12px; transition: 0.3s;
     }
     .project-card:hover { transform: translateY(-5px); }
-    .project-card h3 { color: #00b4d8; margin-bottom: 10px; }
+    .project-card h3 { color: var(--accent-color); margin-bottom: 10px; }
 
     /* Skills with icons */
     .skills-grid {
       display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
     }
-    .skill { background: #1a1a1a; padding: 15px 20px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
-    .skill i { font-size: 1.5rem; color: #00b4d8; }
+    .skill { background: var(--card-color); padding: 15px 20px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+    .skill i { font-size: 1.5rem; color: var(--accent-color); }
 
     /* Certifications */
     .certs-grid {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .certs-grid img {
-      width: 100px; height: auto; background: #fff; border-radius: 6px; padding: 10px;
+
+    .cert-card {
+      background: var(--card-color);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
     }
-    .certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.cert-card {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  transition: 0.3s;
-}
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
 
-.cert-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-}
+    .cert-card img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 15px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+    }
 
-.cert-card img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
-  background: #fff;
-  padding: 10px;
-  border-radius: 8px;
-}
+    .cert-card h3 {
+      color: var(--accent-color);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
 
-.cert-card h3 {
-  color: #00b4d8;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-.cert-card p {
-  font-size: 0.9rem;
-  color: #bbb;
-}
+    .cert-card p {
+      font-size: 0.9rem;
+      color: var(--muted-color);
+    }
 
     /* Contact Form */
     form {
-      max-width: 500px; margin: auto; background: #1a1a1a; padding: 20px; border-radius: 10px;
+      max-width: 500px; margin: auto; background: var(--card-color); padding: 20px; border-radius: 10px;
       display: flex; flex-direction: column; gap: 15px;
     }
     input, textarea {
@@ -155,7 +181,7 @@
     }
     button {
       padding: 12px; border: none; border-radius: 6px;
-      background: #00b4d8; color: #fff; font-weight: bold; cursor: pointer;
+      background: var(--accent-color); color: #fff; font-weight: bold; cursor: pointer;
     }
 
     /* Animations */
@@ -167,7 +193,7 @@
       .hero { grid-template-columns: 1fr; text-align: center; }
     }
 
-    footer { background: #0d0d0d; text-align: center; padding: 20px; color: #aaa; }
+    footer { background: var(--bg-color); text-align: center; padding: 20px; color: var(--muted-color); }
   </style>
 </head>
 <body>
@@ -184,13 +210,16 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="hire-btn">Hire Me</a>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="#contact" class="hire-btn">Hire Me</a>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+    </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-card" data-animate>
-      <img src="profile.jpg" alt="Andrew Oppong-Asante">
+      <img src="assets/images/profile.jpg" alt="Andrew Oppong-Asante">
       <h2>Andrew Oppong-Asante</h2>
       <p>Cybersecurity Specialist | Cloud Security | Penetration Testing</p>
       <div class="socials">
@@ -204,7 +233,7 @@
       <h3>Hello There!</h3>
       <h1>I’m Andrew, a Cybersecurity Specialist crafting secure cloud and network infrastructures.</h1>
       <p class="status">🟢 Available for Freelancing</p>
-      <a href="Cybersecurity Resume-1.pdf" class="btn" download>Download CV</a>
+      <a href="assets/cv/andrew-oppong-asante-cybersecurity-cv.pdf" class="btn" download>Download CV</a>
     </div>
   </section>
 
@@ -234,44 +263,37 @@
   </section>
 
   <!-- Certifications -->
-<section id="certifications" data-animate>
-  <h2>Certifications</h2>
-  <p>Professional certifications that validate my skills and expertise.</p>
-  <div class="certs-grid">
-    
-    <div class="cert-card">
-      <img src="assets/certs/aws.png" alt="AWS Cloud Practitioner">
-      <h3>AWS Certified Cloud Practitioner</h3>
-      <p>Foundational cloud knowledge and core AWS services, earned via AmaliTech AWS re/Start.</p>
+  <section id="certifications" data-animate>
+    <h2>Certifications</h2>
+    <p>Professional certifications that validate my skills and expertise.</p>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <img src="assets/certs/aws.png" alt="AWS Cloud Practitioner">
+        <h3>AWS Certified Cloud Practitioner</h3>
+        <p>Foundational cloud knowledge and AWS services, earned via AmaliTech AWS re/Start.</p>
+      </div>
+      <div class="cert-card">
+        <img src="assets/certs/cisco.png" alt="Cisco Certification">
+        <h3>Cisco Cybersecurity</h3>
+        <p>Completed training in Network Security, Endpoint Security, and SOC Fundamentals.</p>
+      </div>
+      <div class="cert-card">
+        <img src="assets/certs/ec-council.png" alt="EC-Council Certification">
+        <h3>EC-Council Essentials</h3>
+        <p>Certified in Ethical Hacking Essentials and Digital Forensics Essentials.</p>
+      </div>
+      <div class="cert-card">
+        <img src="assets/certs/ibm.png" alt="IBM Cybersecurity">
+        <h3>IBM Cybersecurity Essentials</h3>
+        <p>Knowledge of threat management, risk mitigation, and SOC practices.</p>
+      </div>
+      <div class="cert-card">
+        <img src="assets/certs/microsoft.png" alt="Microsoft AI & ML">
+        <h3>Microsoft / GI-KACE AI & ML</h3>
+        <p>Applied ML concepts to cybersecurity and automation tasks.</p>
+      </div>
     </div>
-
-    <div class="cert-card">
-      <img src="assets/certs/cisco.png" alt="Cisco Certification">
-      <h3>Cisco Cybersecurity</h3>
-      <p>Completed Cisco’s training in Network Security, Endpoint Security, and SOC Fundamentals.</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="assets/certs/ec-council.png" alt="EC-Council Certification">
-      <h3>EC-Council Essentials</h3>
-      <p>Certified in Ethical Hacking Essentials and Digital Forensics Essentials.</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="assets/certs/ibm.png" alt="IBM Cybersecurity">
-      <h3>IBM Cybersecurity Essentials</h3>
-      <p>Demonstrated knowledge of threat management, risk mitigation, and SOC practices.</p>
-    </div>
-
-    <div class="cert-card">
-      <img src="assets/certs/microsoft.png" alt="Microsoft AI & ML">
-      <h3>Microsoft / GI-KACE AI & ML</h3>
-      <p>Applied machine learning concepts to cybersecurity and system automation tasks.</p>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- Contact -->
   <section id="contact" data-animate>
@@ -288,8 +310,9 @@
     © 2025 Andrew Oppong-Asante | Cybersecurity Portfolio
   </footer>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scripts -->
   <script>
+    // Scroll animations
     const elements = document.querySelectorAll('[data-animate]');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -297,6 +320,15 @@
       });
     });
     elements.forEach(el => observer.observe(el));
+
+    // Theme toggle
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      toggleBtn.innerHTML = document.body.classList.contains('light-mode')
+        ? '<i class="fas fa-sun"></i>'
+        : '<i class="fas fa-moon"></i>';
+    });
   </script>
 </body>
 </html>
