@@ -4,158 +4,299 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrew Oppong-Asante | Cybersecurity Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #f1f1f1;
       line-height: 1.6;
     }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* Navbar */
     header {
-      background: #0d1b2a;
-      color: #fff;
+      background: #0d0d0d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 20px 40px;
-      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    header h1 { font-size: 1.5rem; color: #fff; }
+    nav ul { display: flex; gap: 25px; }
+    nav ul li a {
+      color: #ddd; font-weight: 500; transition: 0.3s;
     }
-    header p {
-      margin: 5px 0;
-      font-size: 1rem;
+    nav ul li a:hover { color: #00b4d8; }
+    .hire-btn {
+      background: #00b4d8; padding: 8px 16px; border-radius: 20px;
+      color: #fff; font-weight: 600;
     }
-    nav {
-      margin-top: 10px;
+
+    /* Hero */
+    .hero {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 40px; padding: 80px 40px; align-items: center;
     }
-    nav a {
-      color: #00b4d8;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
+    .hero-card {
+      background: #1a1a1a; border-radius: 12px; padding: 30px; text-align: center;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .hero-card img {
+      width: 150px; border-radius: 50%; border: 4px solid #00b4d8; margin-bottom: 20px;
     }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    .hero-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
+    .hero-card p { font-size: 0.95rem; color: #aaa; }
+    .hero-card .socials { margin-top: 15px; }
+    .hero-card .socials a { margin: 0 8px; font-size: 1.2rem; color: #00b4d8; }
+
+    .hero-content {
+      background: #1a1a1a; border-radius: 12px; padding: 40px;
     }
-    h2 {
-      color: #0d1b2a;
-      border-bottom: 2px solid #00b4d8;
-      padding-bottom: 5px;
+    .hero-content h3 { color: #aaa; margin-bottom: 10px; }
+    .hero-content h1 { font-size: 2rem; margin-bottom: 20px; }
+    .hero-content p { margin-bottom: 20px; }
+    .hero-content .status { color: #00ff99; font-weight: bold; margin-bottom: 20px; }
+    .hero-content .btn {
+      background: #00b4d8; padding: 12px 24px; border-radius: 8px; color: #fff;
+      font-weight: bold; transition: 0.3s;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .hero-content .btn:hover { background: #0094b2; }
+
+    /* Section */
+    section { padding: 60px 40px; max-width: 1100px; margin: auto; }
+    section h2 {
+      font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: #fff;
     }
-    ul li {
-      margin-bottom: 10px;
+    section p {
+      text-align: center; max-width: 700px; margin: auto; color: #bbb; margin-bottom: 40px;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0d1b2a;
-      color: #fff;
-      margin-top: 20px;
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
-    .contact a {
-      color: #00b4d8;
-      text-decoration: none;
+    .project-card {
+      background: #1a1a1a; padding: 20px; border-radius: 12px; transition: 0.3s;
     }
+    .project-card:hover { transform: translateY(-5px); }
+    .project-card h3 { color: #00b4d8; margin-bottom: 10px; }
+
+    /* Skills with icons */
+    .skills-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    }
+    .skill { background: #1a1a1a; padding: 15px 20px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
+    .skill i { font-size: 1.5rem; color: #00b4d8; }
+
+    /* Certifications */
+    .certs-grid {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+    }
+    .certs-grid img {
+      width: 100px; height: auto; background: #fff; border-radius: 6px; padding: 10px;
+    }
+    .certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.cert-card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cert-card h3 {
+  color: #00b4d8;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cert-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+    /* Contact Form */
+    form {
+      max-width: 500px; margin: auto; background: #1a1a1a; padding: 20px; border-radius: 10px;
+      display: flex; flex-direction: column; gap: 15px;
+    }
+    input, textarea {
+      padding: 12px; border: none; border-radius: 6px;
+    }
+    button {
+      padding: 12px; border: none; border-radius: 6px;
+      background: #00b4d8; color: #fff; font-weight: bold; cursor: pointer;
+    }
+
+    /* Animations */
+    [data-animate] { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
+    [data-animate].active { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+    }
+
+    footer { background: #0d0d0d; text-align: center; padding: 20px; color: #aaa; }
   </style>
 </head>
 <body>
 
+  <!-- Navbar -->
   <header>
-    <h1>Andrew Oppong-Asante</h1>
-    <p>Cybersecurity Specialist | Cloud Security | Penetration Testing</p>
+    <h1>Andrew</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+    <a href="#contact" class="hire-btn">Hire Me</a>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Cybersecurity Specialist with expertise in cloud security, penetration testing, and secure network design. 
-      Skilled in attack simulation, vulnerability remediation, and incident response using tools like Metasploit, Burp Suite, Docker, Terraform, and Ansible. 
-      I deliver actionable security recommendations and strengthen cloud infrastructure resilience.
-    </p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-card" data-animate>
+      <img src="profile.jpg" alt="Andrew Oppong-Asante">
+      <h2>Andrew Oppong-Asante</h2>
+      <p>Cybersecurity Specialist | Cloud Security | Penetration Testing</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/andrew-oppong-asante-663368286/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Andrew-Opp/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.credly.com/users/andrew-oppong-asante" target="_blank"><i class="fas fa-certificate"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-content" data-animate>
+      <h3>Hello There!</h3>
+      <h1>I’m Andrew, a Cybersecurity Specialist crafting secure cloud and network infrastructures.</h1>
+      <p class="status">🟢 Available for Freelancing</p>
+      <a href="Cybersecurity Resume-1.pdf" class="btn" download>Download CV</a>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>AWS Penetration Testing Lab:</strong> Designed multi-subnet AWS cloud lab, exploited DVWA, achieved privilege escalation, and pivoted laterally using SSH tunnels. Deployed Cowrie honeypot and documented mitigations.</li>
-      <li><strong>Containerized Reverse Proxy with Traefik:</strong> Built a Docker-based reverse proxy supporting HTTPS, load balancing, HSTS, and monitoring with Prometheus & Grafana.</li>
-      <li><strong>Safe & Efficient Self-Driving Car System:</strong> Developed an autonomous vehicle framework with OpenCV & sensor fusion for real-time lane detection and obstacle avoidance.</li>
-      <li><strong>Multi-Network Containerized Environment:</strong> Simulated segmented Docker networks with enforced security via iptables and bridge rules.</li>
-    </ul>
+  <!-- Projects -->
+  <section id="projects" data-animate>
+    <h2>Works & Projects</h2>
+    <p>Some highlights of my cybersecurity and engineering projects.</p>
+    <div class="projects-grid">
+      <div class="project-card"><h3>AWS Penetration Testing Lab</h3><p>Exploited DVWA, achieved privilege escalation, and lateral movement using SSH tunnels.</p></div>
+      <div class="project-card"><h3>Traefik Reverse Proxy</h3><p>Built a secure Docker reverse proxy with HTTPS, HSTS, and monitoring.</p></div>
+      <div class="project-card"><h3>Self-Driving Car System</h3><p>Developed autonomous vehicle framework with OpenCV & sensor fusion.</p></div>
+      <div class="project-card"><h3>Containerized Network</h3><p>Simulated segmented Docker networks with enforced security via iptables.</p></div>
+    </div>
   </section>
 
-  <section id="experience">
-    <h2>Professional Experience</h2>
-    <ul>
-      <li>
-        <strong>Teaching & Research Assistant</strong> – University of Energy and Natural Resources (Nov 2023 - Oct 2024)<br>
-        Enhanced student cybersecurity lab proficiency, assisted 400+ students, and improved security protocol efficiency.
-      </li>
-      <li>
-        <strong>Cybersecurity Associate (Intern)</strong> – Hackscience Technologies (Oct 2022 - Dec 2022)<br>
-        Performed 20+ penetration tests, conducted forensic investigations, and trained client teams in cybersecurity awareness.
-      </li>
-    </ul>
+  <!-- Skills -->
+  <section id="skills" data-animate>
+    <h2>Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill"><i class="fab fa-python"></i> Python</div>
+      <div class="skill"><i class="fab fa-aws"></i> AWS</div>
+      <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+      <div class="skill"><i class="fas fa-network-wired"></i> Networking</div>
+      <div class="skill"><i class="fab fa-linux"></i> Linux</div>
+      <div class="skill"><i class="fas fa-bug"></i> Pen Testing</div>
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <p><strong>Cybersecurity Tools:</strong> Metasploit, Burp Suite, Wireshark, Nmap, Cowrie</p>
-    <p><strong>Programming:</strong> Python, SQL, Bash, C++, PowerShell, Shell Scripting</p>
-    <p><strong>Cloud & Infrastructure:</strong> AWS, Terraform, Ansible</p>
-    <p><strong>Containers & Virtualization:</strong> Docker, VMware, QEMU/KVM</p>
-    <p><strong>Operating Systems:</strong> Kali Linux, Parrot OS, Debian, Windows, Windows Server</p>
-    <p><strong>SIEM:</strong> Wazuh</p>
-  </section>
+  <!-- Certifications -->
+<section id="certifications" data-animate>
+  <h2>Certifications</h2>
+  <p>Professional certifications that validate my skills and expertise.</p>
+  <div class="certs-grid">
+    
+    <div class="cert-card">
+      <img src="assets/certs/aws.png" alt="AWS Cloud Practitioner">
+      <h3>AWS Certified Cloud Practitioner</h3>
+      <p>Foundational cloud knowledge and core AWS services, earned via AmaliTech AWS re/Start.</p>
+    </div>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>EC-Council: Ethical Hacking Essentials, Digital Forensics Essentials</li>
-      <li>Cisco: Network Security, Endpoint & Systems Security, SOC Fundamentals</li>
-      <li>IBM: Cybersecurity Essentials</li>
-      <li>AWS: Cloud Practitioner</li>
-      <li>Microsoft/GI-KACE: AI and Machine Learning</li>
-    </ul>
-  </section>
+    <div class="cert-card">
+      <img src="assets/certs/cisco.png" alt="Cisco Certification">
+      <h3>Cisco Cybersecurity</h3>
+      <p>Completed Cisco’s training in Network Security, Endpoint Security, and SOC Fundamentals.</p>
+    </div>
 
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:andrewoppongasante2000@gmail.com">andrewoppongasante2000@gmail.com</a></p>
-    <p>Phone: +233 55 606 9312</p>
-    <p>
-      <a href="https://www.linkedin.com/in/andrew-oppong-asante-663368286/" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/Andrew-Opp/" target="_blank">GitHub</a> | 
-      <a href="https://www.credly.com/users/andrew-oppong-asante" target="_blank">Credly</a>
-    </p>
+    <div class="cert-card">
+      <img src="assets/certs/ec-council.png" alt="EC-Council Certification">
+      <h3>EC-Council Essentials</h3>
+      <p>Certified in Ethical Hacking Essentials and Digital Forensics Essentials.</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="assets/certs/ibm.png" alt="IBM Cybersecurity">
+      <h3>IBM Cybersecurity Essentials</h3>
+      <p>Demonstrated knowledge of threat management, risk mitigation, and SOC practices.</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="assets/certs/microsoft.png" alt="Microsoft AI & ML">
+      <h3>Microsoft / GI-KACE AI & ML</h3>
+      <p>Applied machine learning concepts to cybersecurity and system automation tasks.</p>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" data-animate>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <p>© 2025 Andrew Oppong-Asante | Cybersecurity Portfolio</p>
+    © 2025 Andrew Oppong-Asante | Cybersecurity Portfolio
   </footer>
 
+  <!-- Scroll Animation Script -->
+  <script>
+    const elements = document.querySelectorAll('[data-animate]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    });
+    elements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
