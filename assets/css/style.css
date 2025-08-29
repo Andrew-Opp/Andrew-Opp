@@ -153,3 +153,42 @@ footer { background: var(--bg-color); text-align: center; padding: 20px; color: 
   margin-bottom: 8px;
   color: var(--text-color);
 }
+/* Contact page layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.contact-info ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-info li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+.contact-form form {
+  background: var(--card-color);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
