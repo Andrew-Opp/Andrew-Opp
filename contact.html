@@ -16,7 +16,7 @@
 
   <!-- Navbar -->
   <header>
-    <h1>Andrew</h1>
+    <h1><a href="index.html" style="color:inherit;">Andrew</a></h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -35,22 +35,31 @@
 
   <!-- Contact Section -->
   <section id="contact" data-animate>
-    <h2>Contact Me</h2>
-    <p>Let’s collaborate! You can reach me directly via email or use the form below.</p>
+    <h2>Get in Touch</h2>
+    <div class="contact-grid">
+      
+      <!-- Left Column -->
+      <div class="contact-info">
+        <p>If you’d like to discuss a project, collaboration, or just want to say hi, feel free to reach out!</p>
+        
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:andrew.oppong.asante@gmail.com">andrew.oppong.asante@gmail.com</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/andrew-oppong-asante-663368286/" target="_blank">LinkedIn</a></li>
+          <li><i class="fab fa-github"></i> <a href="https://github.com/Andrew-Opp" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
 
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/xwpnkvqo" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+      <!-- Right Column (Form) -->
+      <div class="contact-form">
+        <form action="https://formspree.io/f/xwpnkvqo" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
 
-    <!-- Backup Email -->
-    <p style="margin-top:20px; text-align:center;">
-      Or email me directly at:
-      <a href="mailto:andrew.oppong.asante@gmail.com">andrew.oppong.asante@gmail.com</a>
-    </p>
+    </div>
   </section>
 
   <footer>
