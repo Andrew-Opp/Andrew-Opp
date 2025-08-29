@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Andrew Oppong-Asante</title>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Andrew</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a href="contact.html" class="hire-btn">Hire Me</a>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" data-animate>
+    <h2>Works & Projects</h2>
+    <p>Some highlights of my cybersecurity and engineering projects.</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>AWS Penetration Testing Lab</h3>
+        <p>Exploited DVWA, achieved privilege escalation, and lateral movement using SSH tunnels.</p>
+        <a href="https://github.com/Andrew-Opp/AWS-Pentest-Lab" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Traefik Reverse Proxy</h3>
+        <p>Built a secure Docker reverse proxy with HTTPS, HSTS, and monitoring.</p>
+        <a href="https://github.com/Andrew-Opp/Traefik-Reverse-Proxy" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Self-Driving Car System</h3>
+        <p>Developed autonomous vehicle framework with OpenCV & sensor fusion.</p>
+        <a href="https://github.com/Andrew-Opp/Self-Driving-Car" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Containerized Network</h3>
+        <p>Simulated segmented Docker networks with enforced security via iptables.</p>
+        <a href="https://github.com/Andrew-Opp/Containerized-Network" target="_blank" class="btn">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Andrew Oppong-Asante | Cybersecurity Portfolio
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
