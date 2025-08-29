@@ -4,197 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Andrew Oppong-Asante | Cybersecurity Portfolio</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-    }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
-
-    :root {
-      --bg-color: #0d0d0d;
-      --card-color: #1a1a1a;
-      --text-color: #f1f1f1;
-      --muted-color: #aaa;
-      --accent-color: #00b4d8;
-      --secondary-accent: #00ff99;
-    }
-
-    body.light-mode {
-      --bg-color: #ffffff;
-      --card-color: #f4f4f4;
-      --text-color: #333333;
-      --muted-color: #555;
-      --accent-color: #0077cc;
-      --secondary-accent: #008c5a;
-    }
-
-    /* Navbar */
-    header {
-      background: var(--bg-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    header h1 { font-size: 1.5rem; color: var(--text-color); }
-    nav ul { display: flex; gap: 25px; }
-    nav ul li a {
-      color: var(--muted-color); font-weight: 500; transition: 0.3s;
-    }
-    nav ul li a:hover { color: var(--accent-color); }
-    .hire-btn {
-      background: var(--accent-color); padding: 8px 16px; border-radius: 20px;
-      color: #fff; font-weight: 600;
-    }
-    .theme-toggle {
-      background: none;
-      border: 2px solid var(--accent-color);
-      border-radius: 50%;
-      color: var(--accent-color);
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      margin-left: 15px;
-    }
-
-    /* Hero */
-    .hero {
-      display: grid; grid-template-columns: 1fr 2fr;
-      gap: 40px; padding: 80px 40px; align-items: center;
-    }
-    .hero-card {
-      background: var(--card-color); border-radius: 12px; padding: 30px; text-align: center;
-    }
-    .hero-card img {
-      width: 150px; border-radius: 50%; border: 4px solid var(--accent-color); margin-bottom: 20px;
-    }
-    .hero-card h2 { font-size: 1.5rem; margin-bottom: 10px; }
-    .hero-card p { font-size: 0.95rem; color: var(--muted-color); }
-    .hero-card .socials { margin-top: 15px; }
-    .hero-card .socials a { margin: 0 8px; font-size: 1.2rem; color: var(--accent-color); }
-
-    .hero-content {
-      background: var(--card-color); border-radius: 12px; padding: 40px;
-    }
-    .hero-content h3 { color: var(--muted-color); margin-bottom: 10px; }
-    .hero-content h1 { font-size: 2rem; margin-bottom: 20px; }
-    .hero-content p { margin-bottom: 20px; }
-    .hero-content .status { color: var(--secondary-accent); font-weight: bold; margin-bottom: 20px; }
-    .hero-content .btn {
-      background: var(--accent-color); padding: 12px 24px; border-radius: 8px; color: #fff;
-      font-weight: bold; transition: 0.3s;
-    }
-    .hero-content .btn:hover { filter: brightness(0.9); }
-
-    /* Section */
-    section { padding: 60px 40px; max-width: 1100px; margin: auto; }
-    section h2 {
-      font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--text-color);
-    }
-    section p {
-      text-align: center; max-width: 700px; margin: auto; color: var(--muted-color); margin-bottom: 40px;
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .project-card {
-      background: var(--card-color); padding: 20px; border-radius: 12px; transition: 0.3s;
-    }
-    .project-card:hover { transform: translateY(-5px); }
-    .project-card h3 { color: var(--accent-color); margin-bottom: 10px; }
-
-    /* Skills with icons */
-    .skills-grid {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
-    }
-    .skill { background: var(--card-color); padding: 15px 20px; border-radius: 8px; display: flex; align-items: center; gap: 10px; }
-    .skill i { font-size: 1.5rem; color: var(--accent-color); }
-
-    /* Certifications */
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .cert-card {
-      background: var(--card-color);
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .cert-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .cert-card img {
-      width: 80px;
-      height: auto;
-      margin-bottom: 15px;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-    }
-
-    .cert-card h3 {
-      color: var(--accent-color);
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .cert-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-    }
-
-    /* Contact Form */
-    form {
-      max-width: 500px; margin: auto; background: var(--card-color); padding: 20px; border-radius: 10px;
-      display: flex; flex-direction: column; gap: 15px;
-    }
-    input, textarea {
-      padding: 12px; border: none; border-radius: 6px;
-    }
-    button {
-      padding: 12px; border: none; border-radius: 6px;
-      background: var(--accent-color); color: #fff; font-weight: bold; cursor: pointer;
-    }
-
-    /* Animations */
-    [data-animate] { opacity: 0; transform: translateY(30px); transition: 0.8s ease; }
-    [data-animate].active { opacity: 1; transform: translateY(0); }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-    }
-
-    footer { background: var(--bg-color); text-align: center; padding: 20px; color: var(--muted-color); }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -203,29 +22,29 @@
     <h1>Andrew</h1>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div style="display:flex;align-items:center;gap:10px;">
-      <a href="#contact" class="hire-btn">Hire Me</a>
+    <div class="nav-actions">
+      <a href="contact.html" class="hire-btn">Hire Me</a>
       <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-card" data-animate>
       <img src="assets/images/profile.jpg" alt="Andrew Oppong-Asante">
       <h2>Andrew Oppong-Asante</h2>
       <p>Cybersecurity Specialist | Cloud Security | Penetration Testing</p>
       <div class="socials">
-        <a href="https://www.linkedin.com/in/andrew-oppong-asante-663368286/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Andrew-Opp/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.credly.com/users/andrew-oppong-asante" target="_blank"><i class="fas fa-certificate"></i></a>
+        <a href="https://www.linkedin.com/in/andrew-oppong-asante-663368286/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Andrew-Opp/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.credly.com/users/andrew-oppong-asante" target="_blank" aria-label="Credly"><i class="fas fa-certificate"></i></a>
       </div>
     </div>
 
@@ -237,103 +56,12 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" data-animate>
-    <h2>Works & Projects</h2>
-    <p>Some highlights of my cybersecurity and engineering projects.</p>
-    <div class="projects-grid">
-      <div class="project-card"><h3>AWS Penetration Testing Lab</h3><p>Exploited DVWA, achieved privilege escalation, and lateral movement using SSH tunnels.</p></div>
-      <div class="project-card"><h3>Traefik Reverse Proxy</h3><p>Built a secure Docker reverse proxy with HTTPS, HSTS, and monitoring.</p></div>
-      <div class="project-card"><h3>Self-Driving Car System</h3><p>Developed autonomous vehicle framework with OpenCV & sensor fusion.</p></div>
-      <div class="project-card"><h3>Containerized Network</h3><p>Simulated segmented Docker networks with enforced security via iptables.</p></div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" data-animate>
-    <h2>Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="skill"><i class="fab fa-python"></i> Python</div>
-      <div class="skill"><i class="fab fa-aws"></i> AWS</div>
-      <div class="skill"><i class="fab fa-docker"></i> Docker</div>
-      <div class="skill"><i class="fas fa-network-wired"></i> Networking</div>
-      <div class="skill"><i class="fab fa-linux"></i> Linux</div>
-      <div class="skill"><i class="fas fa-bug"></i> Pen Testing</div>
-    </div>
-  </section>
-
-  <section id="certifications" data-animate>
-    <h2>Certifications</h2>
-    <p>Professional certifications that validate my skills and expertise.</p>
-    <div class="certs-grid">
-      <div class="cert-card">
-        <h3>IBM Certified: Introduction to Cybersecurity Essentials</h3>
-        <p>Knowledge of threat management, risk mitigation, and SOC practices.</p>
-        <a href="https://coursera.org/share/85f30cead98c552f2b9f348a97a28cd7" target="_blank">View Credential</a>
-      </div>
-      <div class="cert-card">
-        <h3>EC-Council Certified: Ethical Hacking Essentials</h3>
-        <p>Certified in Ethical Hacking fundamentals, covering vulnerabilities and attack methods.</p>
-        <a href="https://coursera.org/share/ad0bd346ebe2840f64ad2bbba6d0e8c1" target="_blank">View Credential</a>
-      </div>
-      <div class="cert-card">
-        <h3>Cisco: Network Security</h3>
-        <p>Completed training in secure network architecture and defense mechanisms.</p>
-        <a href="https://coursera.org/share/1613995938ccc7b5412385c3b3ec5d94" target="_blank">View Credential</a>
-      </div>
-      <div class="cert-card">
-        <h3>EC-Council: Digital Forensics Essentials</h3>
-        <p>Practical skills in forensic analysis, evidence collection, and reporting.</p>
-        <a href="https://coursera.org/share/31a195392523f8927272105ccfa97d5c" target="_blank">View Credential</a>
-      </div>
-      <div class="cert-card">
-        <h3>Cisco: SOC Fundamentals</h3>
-        <p>Understanding of Security Operations Center workflows and incident response.</p>
-        <a href="https://coursera.org/share/b4d75ca21430334a3631bd12e58234ba" target="_blank">View Credential</a>
-      </div>
-      <div class="cert-card">
-        <h3>Cisco: Endpoints and Systems Security</h3>
-        <p>Learned to secure operating systems, endpoints, and enterprise environments.</p>
-        <a href="https://coursera.org/share/ed44486871d32b3ec0bed0e3de9cdbd1" target="_blank">View Credential</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" data-animate>
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xwpnkvqo" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
+  <!-- Footer -->
   <footer>
     © 2025 Andrew Oppong-Asante | Cybersecurity Portfolio
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    // Scroll animations
-    const elements = document.querySelectorAll('[data-animate]');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
-      });
-    });
-    elements.forEach(el => observer.observe(el));
-
-    // Theme toggle
-    const toggleBtn = document.getElementById('themeToggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('light-mode');
-      toggleBtn.innerHTML = document.body.classList.contains('light-mode')
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-    });
-  </script>
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
