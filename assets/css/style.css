@@ -366,3 +366,32 @@ footer { background: var(--bg-color); text-align: center; padding: 20px; color: 
     font-size: 1rem;
   }
 }
+/* Hide hamburger by default */
+.menu-toggle {
+  display: none;
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--accent-color);
+    margin-left: auto;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    background: var(--card-color);
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+}
